@@ -33,6 +33,13 @@ $(document).keypress(function(){
   $('.btn').on('click',onClick);
 });
 
+$(document).on('touchstart',function(){
+  nextSequence();
+  $(document).off('keypress');
+  $('.btn').on('click',onClick);
+});
+
+
 function onClick(){
   var userChosenColor=$(this).attr("id");
 
